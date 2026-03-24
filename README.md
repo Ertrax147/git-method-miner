@@ -1,5 +1,6 @@
 # git-method-miner
-Para ejecutar: docker-compose up --build (configurar GITHUB_TOKEN en archivo .env).
+Para ejecutar: docker-compose up --build 
+(antes configurar GITHUB_TOKEN en archivo .env)
 
 Diseño: Microservicios en Python y Java comunicados por Redis (cola de mensajes).
 Mineria: Uso de AST (ast y javalang) para obtener nombres de métodos reales de forma precisa.
