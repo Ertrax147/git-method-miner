@@ -7,10 +7,15 @@ services:
     build: ./miner
     depends_on:
       - redis
+    environment:
+      - PYTHONUNBUFFERED=1
     env_file: .env
 
   visualizer:
     build: ./visualizer
     depends_on:
       - redis
-      
+    volumes:
+      - ./charts:/app/charts # Comparte carpeta local con la del contenedor
+    environment:
+      - REDIS_HOST=redis
